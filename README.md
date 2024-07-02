@@ -1,3 +1,3 @@
 # I'm GRQZ!
-Here should be a random sentence:
-Sentence 1
+Here should be a random sentence:  
+Sentence 2
