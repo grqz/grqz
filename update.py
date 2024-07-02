@@ -7,6 +7,11 @@ with open('sentences.json', 'r') as f:
 
 # Choose a random sentence
 random_sentence = random.choice(sentences)
+if isinstance(random_sentence, dict):
+    filePath = random_sentence.get('path')
+    if filePath:
+        with open(filePath, 'r') as f:
+            random_sentence = f.read()
 
 # Read the template file
 with open('README.md.template', 'r') as f:
