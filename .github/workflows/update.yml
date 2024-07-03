@@ -25,4 +25,3 @@ jobs:
                 git add -A
                 git commit -m 'Update README.md with a random sentence'
                 git push
-            - run: env

@@ -4,7 +4,12 @@ import random
 # Load sentences from sentences.json
 with open('sentences.json', 'r') as f:
     sentences = json.load(f)
-
+for sentence in sentences:
+    if isinstance(random_sentence, dict):
+        filePath = random_sentence.get('recurse')  # !
+        if filePath:
+            with open(filePath, 'r') as f:
+                random_sentence = f.read()
 # Choose a random sentence
 random_sentence = random.choice(sentences)
 if isinstance(random_sentence, dict):
