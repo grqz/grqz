@@ -1,8 +1,5 @@
 [
-    "Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.\nThank you!!!",
     "Completely automated!",
-    {"path": "files/test.md"},
-    {"path": "files/sent1.md"},
-    {"path": "files/sent2.md"},
-    {"path": "files/import_std.md"}
+    {"dir": "files"},
+    {"path": "moderator_note.md"}
 ]
