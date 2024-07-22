@@ -1,7 +1,7 @@
 # I'm GRQZ!
 Here should be something random:  
-Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
-Thank you!!!
+Did you know? This repo is just to keep my Github Commits green.
+I use a ssh key so that no one can see my real commits(except for merging things).
 
 
-Last Update: 2024-07-22 01:14:00.070508+00:00
+Last Update: 2024-07-22 12:31:42.247488+00:00
