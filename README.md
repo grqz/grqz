@@ -1,11 +1,6 @@
 # I'm GRQZ!
 Here should be something random:  
-Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
-
-![dlp](/imgs/dlp.png)  
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)
+Great! This sentence is read from a file!
 
 
-Last Update: 2024-07-29 12:31:34.443788+00:00
+Last Update: 2024-07-30 01:12:02.475550+00:00
