@@ -1,6 +1,11 @@
 # I'm GRQZ!
 Here should be something random:  
-Planning to do some Github Pages stuff...
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
+
+![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
 
 
-Last Update: 2024-08-06 12:31:33.265782+00:00
+Last Update: 2024-08-07 01:13:14.195994+00:00
