@@ -1,11 +1,7 @@
 # I'm GRQZ!
 Here should be something random:  
-Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
-
-![dlp](/imgs/dlp.png)  
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)
+Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
+Thank you!!!
 
 
-Last Update: 2024-08-11 12:29:27.764393+00:00
+Last Update: 2024-08-12 01:15:01.930339+00:00
