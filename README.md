@@ -1,8 +1,7 @@
 # I'm GRQZ!
 Here should be something random:  
-Did you know? This repo is just to keep my Github Commits green.
-I use a ssh key so that no one can see my real commits(except for merging things).
-Seems like submitting prs with this account is inevitable...
+Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
+Thank you!!!
 
 
-Last Update: 2024-08-14 01:13:37.449701+00:00
+Last Update: 2024-08-14 12:31:57.941150+00:00
