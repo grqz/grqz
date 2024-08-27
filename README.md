@@ -1,8 +1,7 @@
 # I'm GRQZ!
 Here should be something random:  
-```cpp
-import std;
-```
+Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
+Thank you!!!
 
 
-Last Update: 2024-08-26 12:32:14.149971+00:00
+Last Update: 2024-08-27 01:14:58.058422+00:00
