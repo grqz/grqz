@@ -1,8 +1,11 @@
 # I'm GRQZ!
 Here should be something random:  
-```cpp
-import std;
-```
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
+
+![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
 
 
-Last Update: 2024-08-31 12:30:25.991725+00:00
+Last Update: 2024-09-01 01:34:18.727887+00:00
