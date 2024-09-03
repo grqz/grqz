@@ -1,8 +1,6 @@
 # I'm GRQZ!
 Here should be something random:  
-```cpp
-import std;
-```
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2024-09-02 12:34:12.801349+00:00
+Last Update: 2024-09-03 01:15:33.179983+00:00
