@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2024-09-07 10:54:33.945195+00:00
+Last Update: 2024-09-07 12:30:08.031068+00:00
