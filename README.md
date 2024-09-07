@@ -1,8 +1,6 @@
-# I'm GRQZ!
+## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+This sentence is read from a file.
 
 
-Last Update: 2024-09-07 01:15:21.851471+00:00
+Last Update: 2024-09-07 10:54:33.945195+00:00
