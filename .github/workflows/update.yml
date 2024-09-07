@@ -1,27 +1,28 @@
 on:
-    workflow_dispatch:
-    schedule:
-        - cron: 0 */12 * * *
+  workflow_dispatch:
+  schedule:
+    - cron: 0 */12 * * *
 permissions: write-all
+
 jobs:
-    update_job:
-        name: update README
-        runs-on: ubuntu-latest
-        permissions: write-all
-        steps:
-            - name: Checkout repo
-              uses: actions/checkout@v4
-            - name: Setup Python
-              uses: actions/setup-python@v5
-              with:
-                  python-version: '3.12'
-            - name: Run script
-              run: python update.py
-            - name: Commit changes
-              run: |
-                git remote set-url origin https://$GITHUB_REPOSITORY_OWNER:$PAT@github.com/$GITHUB_REPOSITORY
-                git config --global user.name "$GITHUB_REPOSITORY_OWNER"
-                git config --global user.email '173015200+grqz@users.noreply.github.com'
-                git add -A
-                git commit -m 'Update README.md with a random sentence'
-                git push
+  update_job:
+    name: update README
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+          python-version: '3.12'
+    - name: Run script
+      run: python update.py
+    - name: Commit changes
+      run: |
+        git remote set-url origin https://$GITHUB_REPOSITORY_OWNER:$PAT@github.com/$GITHUB_REPOSITORY
+        git config --global user.name "$GITHUB_REPOSITORY_OWNER"
+        git config --global user.email '173015200+grqz@users.noreply.github.com'
+        git add -A
+        git commit -m 'Update README.md with a random sentence'
+        git push
