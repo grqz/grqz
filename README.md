@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2024-09-11 12:34:18.280967+00:00
+Last Update: 2024-09-12 01:17:19.720972+00:00
