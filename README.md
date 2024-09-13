@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+Did you know? This repo is just to keep my Github Commits green.
+I use a ssh key so that no one can see my real commits(except for merging things).
+Seems like submitting prs with this account is inevitable...
 
 
-Last Update: 2024-09-12 16:20:10.574595+00:00
+Last Update: 2024-09-13 01:14:17.301001+00:00
