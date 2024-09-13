@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2024-09-13 15:43:28.635473+00:00
+Last Update: 2024-09-13 16:19:19.132286+00:00
