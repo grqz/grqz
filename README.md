@@ -9,4 +9,4 @@ There is a consensus on British people coming from Europe, but then we are left 
 What language do they speak? I challenge you, putting all my money and my ass on the line here, to find a supposed ""British"" person speaking their native language. Most of then just speak a broken ENGLISH. Yes, english. Really suspicious, huh? And I even tried to look deeper into it. Maybe british just SOUND like english, just like spanish could sound like portuguese for a non-speaker. So I looked up "british dictionary on google" and what I found was shocking: every word in there was AMERICAN. I kid you not. What this could mean is beyond my capabilities, but I can safely assure you that british people do not exist.
 
 
-Last Update: 2024-09-22 06:11:59.256690+00:00
+Last Update: 2024-09-22 12:15:18.468056+00:00
