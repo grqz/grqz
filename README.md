@@ -1,5 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Completely automated!
+```cpp
+import std;
+```
 
-Last Update: 2024-09-25 18:12:34.518072+00:00
+
+VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
+
+
+Last Update: 2024-09-26 00:44:00.161401+00:00
