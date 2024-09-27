@@ -1,30 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```
-BREW coffee HTTP/1.1
-Host: www.example.re
-Content-Type: message/coffeepot
-Content-Length: 5
-
-start
-```
-
-```
-HTTP/1.1 418 I’m a teapot
-Content-Type: text/html
-Content-Length: 146
-
-<html>
-  <head>
-    <title>Beverage not supported</title>
-  </head>
-  <body>
-   <p>I’m a teapot and I don’t support coffee.</p>
-  </body>
-</html>
-```
-It's [The Hyper Text Coffee Pot Control Protocol](https://datatracker.ietf.org/doc/html/rfc7168?utm_source=localhost%3A8080)!
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-
-Last Update: 2024-09-26 18:11:39.772476+00:00
+Last Update: 2024-09-27 00:44:33.621992+00:00
