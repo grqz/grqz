@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+```cpp
+import std;
+```
 
 
-Last Update: 2024-10-06 00:49:33.403307+00:00
+VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
+
+
+Last Update: 2024-10-06 06:12:13.735699+00:00
