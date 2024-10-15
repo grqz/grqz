@@ -1,8 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? This repo is just to keep my Github Commits green.
-I use a ssh key so that no one can see my real commits(except for merging things).
-Seems like submitting prs with this account is inevitable...
+Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
 
 
-Last Update: 2024-10-15 06:13:47.434294+00:00
+
+Last Update: 2024-10-15 12:18:15.030917+00:00
