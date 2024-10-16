@@ -1,8 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? This repo is just to keep my Github Commits green.
-I use a ssh key so that no one can see my real commits(except for merging things).
-Seems like submitting prs with this account is inevitable...
+This sentence is read from a file.
 
 
-Last Update: 2024-10-16 12:17:47.542088+00:00
+Last Update: 2024-10-16 18:12:51.361562+00:00
