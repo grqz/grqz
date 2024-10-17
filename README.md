@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
+
+<!--![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)-->
 
 
-Last Update: 2024-10-16 18:12:51.361562+00:00
+Last Update: 2024-10-17 00:44:35.031957+00:00
