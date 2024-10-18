@@ -1,11 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
-
-<!--![dlp](/imgs/dlp.png)  
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)-->
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2024-10-18 00:44:43.961106+00:00
+Last Update: 2024-10-18 06:13:42.786775+00:00
