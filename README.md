@@ -1,30 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```
-BREW coffee HTTP/1.1
-Host: www.example.re
-Content-Type: message/coffeepot
-Content-Length: 5
-
-start
-```
-
-```
-HTTP/1.1 418 I’m a teapot
-Content-Type: text/html
-Content-Length: 146
-
-<html>
-  <head>
-    <title>Beverage not supported</title>
-  </head>
-  <body>
-   <p>I’m a teapot and I don’t support coffee.</p>
-  </body>
-</html>
-```
-It's [The Hyper Text Coffee Pot Control Protocol](https://datatracker.ietf.org/doc/html/rfc7168?utm_source=localhost%3A8080)!
+Did you know? This repo is just to keep my Github Commits green.
+I use a ssh key so that no one can see my real commits(except for merging things).
+Seems like submitting prs with this account is inevitable...
 
 
-
-Last Update: 2024-10-18 12:17:13.884994+00:00
+Last Update: 2024-10-18 18:12:33.710431+00:00
