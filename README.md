@@ -1,8 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```js
-0.1 + 0.2 - 0.3 === 5.551115123125783e-17
-```
+Did you know? This repo is just to keep my Github Commits green.
+I use a ssh key so that no one can see my real commits(except for merging things).
+Seems like submitting prs with this account is inevitable...
 
 
-Last Update: 2024-10-23 18:12:24.689539+00:00
+Last Update: 2024-10-24 00:44:35.236948+00:00
