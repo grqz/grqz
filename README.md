@@ -1,11 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
-
-
-Last Update: 2024-10-26 12:16:20.692565+00:00
+Last Update: 2024-10-26 18:11:19.396584+00:00
