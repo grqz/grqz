@@ -1,8 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? This repo is just to keep my Github Commits green.
-I use a ssh key so that no one can see my real commits(except for merging things).
-Seems like submitting prs with this account is inevitable...
+```cpp
+import std;
+```
 
 
-Last Update: 2024-10-27 00:49:55.409739+00:00
+VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
+
+
+Last Update: 2024-10-27 06:12:39.800332+00:00
