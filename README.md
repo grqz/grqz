@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+Did you know? This repo is just to keep my Github Commits green.
+I use a ssh key so that no one can see my real commits(except for merging things).
+Seems like submitting prs with this account is inevitable...
 
 
-Last Update: 2024-10-26 18:11:19.396584+00:00
+Last Update: 2024-10-27 00:49:55.409739+00:00
