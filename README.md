@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-
-Last Update: 2024-11-09 00:43:17.011722+00:00
+Last Update: 2024-11-09 06:11:45.748080+00:00
