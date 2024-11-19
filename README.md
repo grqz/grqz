@@ -1,11 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+Planning to do some Github Pages stuff...
 
 
-VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
-
-
-Last Update: 2024-11-19 00:48:11.259519+00:00
+Last Update: 2024-11-19 06:14:07.435992+00:00
