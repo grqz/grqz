@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm you're not a bot. This helps protect our community. Learn more
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
+
+<!--![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)-->
 
 
-Last Update: 2024-11-19 18:13:19.650173+00:00
+Last Update: 2024-11-20 00:47:36.289527+00:00
