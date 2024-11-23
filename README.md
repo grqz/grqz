@@ -1,7 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-
-Last Update: 2024-11-23 00:46:49.150296+00:00
+Last Update: 2024-11-23 06:13:22.501612+00:00
