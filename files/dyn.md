@@ -1,3 +1,2 @@
-Did you know? This repo is just to keep my Github Commits green.
-I use a ssh key so that no one can see my real commits(except for merging things).
-Seems like submitting prs with this account is inevitable...
+Did you know? I created this repo just to keep my Github contribution graph green.
+I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
