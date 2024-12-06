@@ -1,5 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Completely automated!
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
 
-Last Update: 2024-12-06 00:50:26.055735+00:00
+<!--![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)-->
+
+
+Last Update: 2024-12-06 06:14:37.044984+00:00
