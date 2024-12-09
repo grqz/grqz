@@ -1,5 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Completely automated!
+Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
 
-Last Update: 2024-12-09 06:15:24.034250+00:00
+
+
+Last Update: 2024-12-09 12:20:29.809471+00:00
