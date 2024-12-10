@@ -1,11 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
+
+<!--![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)-->
 
 
-VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
-
-
-Last Update: 2024-12-10 12:19:55.775931+00:00
+Last Update: 2024-12-10 18:14:23.123293+00:00
