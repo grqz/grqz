@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
-Thank you!!!
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2024-12-12 12:19:51.757478+00:00
+Last Update: 2024-12-12 18:14:19.493211+00:00
