@@ -1,8 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```js
-0.1 + 0.2 - 0.3 === 5.551115123125783e-17
-```
+> Sign in to confirm your age. This video may be inappropriate for some users.
 
 
-Last Update: 2024-12-14 18:12:32.081236+00:00
+Last Update: 2024-12-15 00:55:08.888615+00:00
