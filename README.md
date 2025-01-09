@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+> Sign in to confirm you're not a bot. This helps protect our community. Learn more
 
 
-Last Update: 2025-01-08 18:13:14.821622+00:00
+Last Update: 2025-01-09 00:45:47.012504+00:00
