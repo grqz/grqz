@@ -1,30 +1,12 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```
-BREW coffee HTTP/1.1
-Host: www.example.re
-Content-Type: message/coffeepot
-Content-Length: 5
+Do british people actually exist? I mean, they must be a meme, there is a not a single thing about them. And I mean it.
 
-start
-```
+Let's go through the evidence: Where are they from? Not a single country in the world is named Britain. Some people say they come from England, and England is inside Britain, but if that was the case they would be British they would be Englanders. Also, heard some silly theories about them coming from whales. Guys, no, whale people do not exist. Whales live in the sea.
 
-```
-HTTP/1.1 418 I’m a teapot
-Content-Type: text/html
-Content-Length: 146
+There is a consensus on British people coming from Europe, but then we are left with a whole continent of possible locations. That's as good as nothing. What do they eat? Every country has at least one main dish. Even the US has their burgers. But these British people, what do they eat? Heard some people associating them with tea, but everyone knows that's an Asian thing. Shouldn't they come from Europe? One of these two points must be wrong them. To me, it looks too sketchy.
 
-<html>
-  <head>
-    <title>Beverage not supported</title>
-  </head>
-  <body>
-   <p>I’m a teapot and I don’t support coffee.</p>
-  </body>
-</html>
-```
-It's [The Hyper Text Coffee Pot Control Protocol](https://datatracker.ietf.org/doc/html/rfc7168?utm_source=localhost%3A8080)!
+What language do they speak? I challenge you, putting all my money and my ass on the line here, to find a supposed ""British"" person speaking their native language. Most of then just speak a broken ENGLISH. Yes, english. Really suspicious, huh? And I even tried to look deeper into it. Maybe british just SOUND like english, just like spanish could sound like portuguese for a non-speaker. So I looked up "british dictionary on google" and what I found was shocking: every word in there was AMERICAN. I kid you not. What this could mean is beyond my capabilities, but I can safely assure you that british people do not exist.
 
 
-
-Last Update: 2025-01-14 18:12:40.320687+00:00
+Last Update: 2025-01-15 00:44:35.216772+00:00
