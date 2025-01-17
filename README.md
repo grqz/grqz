@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
+
+<!--![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)-->
 
 
-Last Update: 2025-01-17 06:13:17.293967+00:00
+Last Update: 2025-01-17 12:17:12.684444+00:00
