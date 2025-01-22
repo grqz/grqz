@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-I can't maintain over 7 active branches at the same time for the same repository.
-Please get them reviewed before I can work on the new ones
+Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
 
-Last Update: 2025-01-22 00:45:26.185181+00:00
+<!--![dlp](/imgs/dlp.png)  
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)
+![skull](/imgs/skull.png)-->
+
+
+Last Update: 2025-01-22 06:13:41.937163+00:00
