@@ -1,11 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Working on [yt-dlp](https://github.com/yt-dlp/yt-dlp)!
-
-<!--![dlp](/imgs/dlp.png)  
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)
-![skull](/imgs/skull.png)-->
+Did you know? I created this repo just to keep my Github contribution graph green.
+I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
 
 
-Last Update: 2025-01-23 06:13:43.759059+00:00
+Last Update: 2025-01-23 12:18:02.218142+00:00
