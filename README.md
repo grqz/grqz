@@ -1,30 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```
-BREW coffee HTTP/1.1
-Host: www.example.re
-Content-Type: message/coffeepot
-Content-Length: 5
-
-start
-```
-
-```
-HTTP/1.1 418 I’m a teapot
-Content-Type: text/html
-Content-Length: 146
-
-<html>
-  <head>
-    <title>Beverage not supported</title>
-  </head>
-  <body>
-   <p>I’m a teapot and I don’t support coffee.</p>
-  </body>
-</html>
-```
-It's [The Hyper Text Coffee Pot Control Protocol](https://datatracker.ietf.org/doc/html/rfc7168?utm_source=localhost%3A8080)!
+> Sign in to confirm your age. This video may be inappropriate for some users.
 
 
-
-Last Update: 2025-01-29 18:12:49.756127+00:00
+Last Update: 2025-01-30 00:43:32.749106+00:00
