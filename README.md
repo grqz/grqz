@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-Last Update: 2025-02-12 18:13:05.450040+00:00
+Last Update: 2025-02-13 00:45:52.829352+00:00
