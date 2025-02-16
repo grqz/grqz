@@ -1,8 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```js
-0.1 + 0.2 - 0.3 === 5.551115123125783e-17
-```
+I can't maintain over 7 active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones
 
-
-Last Update: 2025-02-16 06:12:09.531447+00:00
+Last Update: 2025-02-16 12:17:58.710493+00:00
