@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Planning to do some Github Pages stuff...
+Did you know? I created this repo just to keep my Github contribution graph green.
+I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
 
 
-Last Update: 2025-02-17 06:14:11.664894+00:00
+Last Update: 2025-02-17 12:18:33.941975+00:00
