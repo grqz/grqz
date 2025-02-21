@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [TLSv1.2](<https://www.ietf.org/rfc/rfc5246.txt>)!
+Did you know? I created this repo just to keep my Github contribution graph green.
+I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
 
 
-Last Update: 2025-02-21 00:46:08.550664+00:00
+Last Update: 2025-02-21 06:13:43.392899+00:00
