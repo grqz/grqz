@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+I can't maintain over 7 active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones
 
-
-Last Update: 2025-03-08 18:10:23.951624+00:00
+Last Update: 2025-03-09 00:41:40.477541+00:00
