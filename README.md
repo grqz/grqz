@@ -1,8 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```js
-0.1 + 0.2 - 0.3 === 5.551115123125783e-17
-```
+Did you know? I created this repo just to keep my Github contribution graph green.
+I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
 
 
-Last Update: 2025-03-18 06:14:40.755274+00:00
+Last Update: 2025-03-18 12:19:16.703663+00:00
