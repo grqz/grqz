@@ -1,7 +1,30 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
+```
+BREW coffee HTTP/1.1
+Host: www.example.re
+Content-Type: message/coffeepot
+Content-Length: 5
+
+start
+```
+
+```
+HTTP/1.1 418 I’m a teapot
+Content-Type: text/html
+Content-Length: 146
+
+<html>
+  <head>
+    <title>Beverage not supported</title>
+  </head>
+  <body>
+   <p>I’m a teapot and I don’t support coffee.</p>
+  </body>
+</html>
+```
+It's [The Hyper Text Coffee Pot Control Protocol](https://datatracker.ietf.org/doc/html/rfc7168?utm_source=localhost%3A8080)!
 
 
 
-Last Update: 2025-03-20 06:14:30.267656+00:00
+Last Update: 2025-03-20 12:19:26.627437+00:00
