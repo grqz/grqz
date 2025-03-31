@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2025-03-30 18:12:15.059882+00:00
+Last Update: 2025-03-31 00:53:13.744057+00:00
