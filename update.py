@@ -1,6 +1,7 @@
 import json
 import random
 import os
+from random import randint
 from datetime import datetime, timezone
 
 # Load sentences from sentences.json
@@ -24,6 +25,12 @@ if isinstance(random_sentence, dict):
     if recDir:
         with open(recDir, 'r') as f:
             random_sentence = f.read()
+
+# Flip the sentence back to front at random times
+random_number = randint(1, 2)
+if a < 2: # Check to see if the value is 1
+    if random_sentence != None: # Check to ensure that the string is not empty
+        random_sentence = random_sentence[::-1] # If not then flip the text
 
 # Read the template file
 with open('README.md.template', 'r') as f:
