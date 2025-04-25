@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
-Thank you!!!
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-Last Update: 2025-04-24 18:14:02.173266+00:00
+Last Update: 2025-04-25 00:52:05.173549+00:00
