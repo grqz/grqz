@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+Currently Working on [TLSv1.2](<https://www.ietf.org/rfc/rfc5246.txt>)!
 
 
-Last Update: 2025-04-29 12:21:11.070356+00:00
+Last Update: 2025-04-29 18:14:54.180427+00:00
