@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [TLSv1.2](<https://www.ietf.org/rfc/rfc5246.txt>)!
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-Last Update: 2025-05-05 12:20:23.606073+00:00
+Last Update: 2025-05-05 18:12:14.507919+00:00
