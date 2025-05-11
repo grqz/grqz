@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm you're not a bot. This helps protect our community. Learn more
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2025-05-11 12:17:56.941788+00:00
+Last Update: 2025-05-11 18:12:49.996507+00:00
