@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [TLSv1.2](<https://www.ietf.org/rfc/rfc5246.txt>)!
+What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
 
 
-Last Update: 2025-05-15 12:20:38.064221+00:00
+Last Update: 2025-05-15 18:14:47.669225+00:00
