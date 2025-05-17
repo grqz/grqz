@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm you're not a bot. This helps protect our community. Learn more
+I can't maintain over 7 active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones
 
-
-Last Update: 2025-05-17 00:52:28.794760+00:00
+Last Update: 2025-05-17 06:13:56.687671+00:00
