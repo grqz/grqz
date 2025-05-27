@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
+```cpp
+import std;
+```
 
 
-Last Update: 2025-05-27 06:15:44.430442+00:00
+VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
+
+
+Last Update: 2025-05-27 12:21:19.158933+00:00
