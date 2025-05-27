@@ -1,30 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```
-BREW coffee HTTP/1.1
-Host: www.example.re
-Content-Type: message/coffeepot
-Content-Length: 5
-
-start
+```cpp
+import std;
 ```
 
-```
-HTTP/1.1 418 I’m a teapot
-Content-Type: text/html
-Content-Length: 146
 
-<html>
-  <head>
-    <title>Beverage not supported</title>
-  </head>
-  <body>
-   <p>I’m a teapot and I don’t support coffee.</p>
-  </body>
-</html>
-```
-It's [The Hyper Text Coffee Pot Control Protocol](https://datatracker.ietf.org/doc/html/rfc7168?utm_source=localhost%3A8080)!
+VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)
 
 
-
-Last Update: 2025-05-26 18:14:13.773081+00:00
+Last Update: 2025-05-27 00:53:04.936077+00:00
