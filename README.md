@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
 
 
-Last Update: 2025-06-07 12:18:26.800622+00:00
+
+Last Update: 2025-06-07 18:13:25.229782+00:00
