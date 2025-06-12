@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+> Sign in to confirm you're not a bot. This helps protect our community. Learn more
 
 
-Last Update: 2025-06-11 18:15:28.566794+00:00
+Last Update: 2025-06-12 00:54:48.127879+00:00
