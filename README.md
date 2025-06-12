@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? I created this repo just to keep my Github contribution graph green.
-I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
+I can't maintain over 7 active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones
 
-
-Last Update: 2025-06-12 12:21:01.661634+00:00
+Last Update: 2025-06-12 18:15:08.477549+00:00
