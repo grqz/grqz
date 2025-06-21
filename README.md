@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+Currently Working on [TLSv1.2](<https://www.ietf.org/rfc/rfc5246.txt>)!
 
 
-Last Update: 2025-06-21 06:14:28.704148+00:00
+Last Update: 2025-06-21 12:18:34.636569+00:00
