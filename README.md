@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+This sentence is read from a file.
 
 
-Last Update: 2025-07-06 12:19:11.403143+00:00
+Last Update: 2025-07-06 18:13:53.180719+00:00
