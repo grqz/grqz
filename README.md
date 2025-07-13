@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? I created this repo just to keep my Github contribution graph green.
-I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-Last Update: 2025-07-13 12:20:02.876802+00:00
+Last Update: 2025-07-13 18:14:00.276428+00:00
