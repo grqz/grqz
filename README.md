@@ -1,7 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? I created this repo just to keep my Github contribution graph green.
-I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
+```cpp
+import std;
+```
 
 
-Last Update: 2025-07-17 18:16:37.039020+00:00
+~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
+
+
+Last Update: 2025-07-18 00:58:01.806215+00:00
