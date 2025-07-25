@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Planning to do some Github Pages stuff...
+Currently Working on [TLSv1.2](<https://www.ietf.org/rfc/rfc5246.txt>)!
 
 
-Last Update: 2025-07-25 06:18:46.121630+00:00
+Last Update: 2025-07-25 12:22:06.833951+00:00
