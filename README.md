@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2025-08-03 18:15:29.575878+00:00
+Last Update: 2025-08-04 01:04:39.233955+00:00
