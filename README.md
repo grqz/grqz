@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
 
 
-Last Update: 2025-08-14 18:16:33.994861+00:00
+Last Update: 2025-08-15 00:56:51.907262+00:00
