@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Planning to do some Github Pages stuff...
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2025-08-25 06:17:53.912779+00:00
+Last Update: 2025-08-25 12:21:25.204763+00:00
