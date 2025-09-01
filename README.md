@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? I created this repo just to keep my Github contribution graph green.
-I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
+"grqz" doesn't stand for anything. Just a combination of some random letters.
 
 
-Last Update: 2025-09-01 01:01:02.458624+00:00
+Last Update: 2025-09-01 06:18:19.369417+00:00
