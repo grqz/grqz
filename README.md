@@ -1,11 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+Currently Working on [HTTP/2](<https://www.rfc-editor.org/rfc/rfc9113.html>)!
 
 
-~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
-
-
-Last Update: 2025-09-06 12:17:18.915683+00:00
+Last Update: 2025-09-06 18:12:10.856211+00:00
