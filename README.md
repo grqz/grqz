@@ -1,8 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```js
-0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```cpp
+import std;
 ```
 
 
-Last Update: 2025-09-07 00:54:33.744944+00:00
+~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
+
+
+Last Update: 2025-09-07 06:13:33.311941+00:00
