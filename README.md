@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [HTTP/2](<https://www.rfc-editor.org/rfc/rfc9113.html>)!
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2025-09-06 18:12:10.856211+00:00
+Last Update: 2025-09-07 00:54:33.744944+00:00
