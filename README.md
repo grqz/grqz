@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2025-09-12 06:15:24.764411+00:00
+Last Update: 2025-09-12 12:19:52.405679+00:00
