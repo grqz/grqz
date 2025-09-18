@@ -1,5 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Completely automated!
+What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
 
-Last Update: 2025-09-18 06:15:51.615790+00:00
+
+Last Update: 2025-09-18 12:19:46.382731+00:00
