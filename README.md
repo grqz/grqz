@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
+Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
 
 
-Last Update: 2025-09-17 18:14:42.176366+00:00
+
+Last Update: 2025-09-18 00:48:01.640327+00:00
