@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Did you know? I created this repo just to keep my Github contribution graph green.
-I use another email as `user.email` so that people can't see my real contributions(except for prs/issues).
+> Sign in to confirm your age. This video may be inappropriate for some users.
 
 
-Last Update: 2025-09-26 18:13:24.664504+00:00
+Last Update: 2025-09-27 00:47:25.345475+00:00
