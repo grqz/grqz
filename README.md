@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2025-09-27 12:17:32.366265+00:00
+Last Update: 2025-09-27 18:12:49.158149+00:00
