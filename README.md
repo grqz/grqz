@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+I have once spent **40 attempts in a whole week** reading assembly only to realise I forgot to `return`. 🤯🤯🤯
+
+(<https://github.com/grqz/actpg/commit/83de7bf7932b02afd30faf85acb9a1e9634f8621>)
 
 
-Last Update: 2025-10-01 06:16:44.505786+00:00
+Last Update: 2025-10-01 12:21:52.331999+00:00
