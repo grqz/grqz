@@ -1,11 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+I can't maintain too many active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones.
 
 
-~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
-
-
-Last Update: 2025-10-03 00:48:50.344652+00:00
+Last Update: 2025-10-03 06:15:24.138229+00:00
