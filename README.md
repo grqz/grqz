@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-I can't maintain too many active branches at the same time for the same repository.
-Please get them reviewed before I can work on the new ones.
+Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
 
 
-Last Update: 2025-10-04 06:13:38.704431+00:00
+Last Update: 2025-10-04 12:17:50.049044+00:00
