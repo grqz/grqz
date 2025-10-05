@@ -1,30 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```http
-BREW coffee HTTP/1.1
-Host: www.example.re
-Content-Type: message/coffeepot
-Content-Length: 5
+I have once spent **40 attempts in a whole week** reading assembly only to realise I forgot to `return`. 🤯🤯🤯
 
-start
-```
-
-```http
-HTTP/1.1 418 I’m a teapot
-Content-Type: text/html
-Content-Length: 146
-
-<html>
-  <head>
-    <title>Beverage not supported</title>
-  </head>
-  <body>
-   <p>I’m a teapot and I don’t support coffee.</p>
-  </body>
-</html>
-```
-It's [The Hyper Text Coffee Pot Control Protocol](<https://datatracker.ietf.org/doc/html/rfc7168>)!
+(<https://github.com/grqz/actpg/commit/83de7bf7932b02afd30faf85acb9a1e9634f8621>)
 
 
-
-Last Update: 2025-10-05 06:13:46.388813+00:00
+Last Update: 2025-10-05 12:18:02.610369+00:00
