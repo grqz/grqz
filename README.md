@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+> Sign in to confirm your age. This video may be inappropriate for some users.
 
 
-Last Update: 2025-10-06 06:16:54.338514+00:00
+Last Update: 2025-10-06 12:21:11.235004+00:00
