@@ -1,7 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
-Thank you!!!
+> Sign in to confirm your age. This video may be inappropriate for some users.
 
 
-Last Update: 2025-10-10 06:16:53.472958+00:00
+Last Update: 2025-10-10 12:21:19.929053+00:00
