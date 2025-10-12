@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
 
 
-Last Update: 2025-10-12 00:52:52.297128+00:00
+Last Update: 2025-10-12 06:14:29.279185+00:00
