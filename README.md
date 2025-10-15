@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
 
 
-Last Update: 2025-10-15 12:22:40.198267+00:00
+Last Update: 2025-10-15 18:16:04.464796+00:00
