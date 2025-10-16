@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+```cpp
+import std;
+```
 
 
-Last Update: 2025-10-16 00:51:29.783295+00:00
+~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
+
+
+Last Update: 2025-10-16 06:17:01.040146+00:00
