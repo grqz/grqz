@@ -1,11 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+"grqz" doesn't stand for anything. Just a combination of some random letters.
 
 
-~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
-
-
-Last Update: 2025-10-20 12:21:51.219760+00:00
+Last Update: 2025-10-20 18:16:39.712717+00:00
