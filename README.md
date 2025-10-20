@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2025-10-19 18:13:25.760691+00:00
+Last Update: 2025-10-20 00:55:24.972693+00:00
