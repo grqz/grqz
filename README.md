@@ -1,8 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-I have once spent **40 attempts in a whole week** reading assembly only to realise I forgot to `return`. 🤯🤯🤯
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
-(<https://github.com/grqz/actpg/commit/83de7bf7932b02afd30faf85acb9a1e9634f8621>)
 
-
-Last Update: 2025-10-25 12:18:29.990209+00:00
+Last Update: 2025-10-25 18:13:39.295457+00:00
