@@ -1,11 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+> Sign in to confirm you're not a bot. This helps protect our community. Learn more
 
 
-~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
-
-
-Last Update: 2025-10-26 00:55:41.120924+00:00
+Last Update: 2025-10-26 06:14:59.348513+00:00
