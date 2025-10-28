@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-This sentence is read from a file.
+Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
 
 
-Last Update: 2025-10-28 12:21:21.640068+00:00
+Last Update: 2025-10-28 18:16:44.898970+00:00
