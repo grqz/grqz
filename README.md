@@ -1,7 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
+I can't maintain too many active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones.
 
 
-
-Last Update: 2025-11-09 18:13:59.198267+00:00
+Last Update: 2025-11-10 00:56:44.013867+00:00
