@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm your age. This video may be inappropriate for some users.
+What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
 
 
-Last Update: 2025-11-10 06:18:31.971814+00:00
+Last Update: 2025-11-10 12:22:09.849764+00:00
