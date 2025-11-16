@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+I can't maintain too many active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones.
 
 
-Last Update: 2025-11-15 18:13:48.007637+00:00
+Last Update: 2025-11-16 00:57:57.246787+00:00
