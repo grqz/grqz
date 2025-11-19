@@ -1,6 +1,11 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+```cpp
+import std;
+```
 
 
-Last Update: 2025-11-19 12:22:24.354703+00:00
+~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
+
+
+Last Update: 2025-11-19 18:16:34.391219+00:00
