@@ -1,11 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+Hey Github moderator, please contact me before you want to suspend my account so that I have time to backup all my code.  
+Thank you!!!
 
 
-~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
-
-
-Last Update: 2025-11-19 18:16:34.391219+00:00
+Last Update: 2025-11-20 00:52:52.870479+00:00
