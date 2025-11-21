@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
 
 
-Last Update: 2025-11-21 00:53:49.985587+00:00
+
+Last Update: 2025-11-21 06:17:53.248233+00:00
