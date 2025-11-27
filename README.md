@@ -1,11 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-```cpp
-import std;
-```
+Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
 
 
-~~VSCode is so advanced that it's already got syntax highlighting. (The sentence will be removed when I see the syntax highlighting on Github)~~
-
-
-Last Update: 2025-11-26 18:14:13.215324+00:00
+Last Update: 2025-11-27 00:53:29.492591+00:00
