@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
+Google `cwd` and you can find that `getcwd()` actually stands for "get [chronic wasting disease](https://en.wikipedia.org/wiki/Chronic_wasting_disease)", a deer disease. Invoke it with care.
 
 
-Last Update: 2025-12-04 00:55:31.327449+00:00
+
+Last Update: 2025-12-04 06:18:10.173192+00:00
