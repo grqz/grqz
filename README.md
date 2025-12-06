@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
+Planning to do some Github Pages stuff...
 
 
-Last Update: 2025-12-06 12:19:56.908769+00:00
+Last Update: 2025-12-06 18:14:52.212696+00:00
