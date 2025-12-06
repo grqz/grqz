@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
 
 
-Last Update: 2025-12-06 06:16:08.922051+00:00
+Last Update: 2025-12-06 12:19:56.908769+00:00
