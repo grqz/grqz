@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-Currently Working on [Python + Objective-C integration](<https://github.com/grqz/actpg>)!
+```js
+0.1 + 0.2 - 0.3 === 5.551115123125783e-17
+```
 
 
-Last Update: 2025-12-07 01:01:07.960684+00:00
+Last Update: 2025-12-07 06:15:52.293727+00:00
