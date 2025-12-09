@@ -1,6 +1,7 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-"grqz" doesn't stand for anything. Just a combination of some random letters.
+I can't maintain too many active branches at the same time for the same repository.
+Please get them reviewed before I can work on the new ones.
 
 
-Last Update: 2025-12-08 18:18:08.200437+00:00
+Last Update: 2025-12-09 00:55:52.491730+00:00
