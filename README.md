@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Sign in to confirm you're not a bot. This helps protect our community. Learn more
+I have once spent **40 attempts in a whole week** reading assembly only to realise I forgot to `return`. 🤯🤯🤯
+
+(<https://github.com/grqz/actpg/commit/83de7bf7932b02afd30faf85acb9a1e9634f8621>)
 
 
-Last Update: 2025-12-11 12:24:59.082709+00:00
+Last Update: 2025-12-11 18:16:45.233151+00:00
