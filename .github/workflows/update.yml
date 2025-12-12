@@ -1,25 +1,20 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 */6 * * *
+    - cron: 0 0 * * *
 permissions: write-all
 
 jobs:
-  update_job:
+  update:
     name: update README
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-          python-version: '3.13'
-    - name: Run script
-      run: python update.py
-    - name: Commit changes
+    - name: Update
       run: |
+        python update.py
         git remote set-url origin https://$GITHUB_REPOSITORY_OWNER:$PAT@github.com/$GITHUB_REPOSITORY
         git config --global user.name "$GITHUB_REPOSITORY_OWNER"
         git config --global user.email '173015200+grqz@users.noreply.github.com'
