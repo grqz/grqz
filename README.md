@@ -1,6 +1,6 @@
 ## Hi, I'm GRQZ
 Here should be something random:  
-> Lose performance, lose a lot, lose security, lose everything.
+Currently Working on io_uring!
 
 
-Last Update: 2026-01-10 01:27:06.470280+00:00
+Last Update: 2026-01-11 01:46:56.751858+00:00
