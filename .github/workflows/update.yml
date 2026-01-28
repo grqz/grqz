@@ -14,10 +14,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Update
       run: |
-        python update.py
-        git remote set-url origin https://$GITHUB_REPOSITORY_OWNER:$PAT@github.com/$GITHUB_REPOSITORY
         git config --global user.name "$GITHUB_REPOSITORY_OWNER"
-        git config --global user.email '173015200+grqz@users.noreply.github.com'
+        git config --global user.email `python update.py`
         git add -A
-        git commit -m 'Update README.md with a random sentence'
+        git commit -m 'Update README.md with a random message'
         git push

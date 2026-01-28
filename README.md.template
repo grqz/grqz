@@ -1,6 +1,8 @@
 ## Hi, I'm GRQZ
-Here should be something random:  
-{sentences}
+Message of the day:  
+{message}
 
-Last Update: {utcDateTime}
-My email: grqz.dev@proton.me
+---
+
+Last Update: {utcDateTime}  
+[Contact Me](mailto:{uriEncodedEmail})
