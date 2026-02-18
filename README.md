@@ -1,9 +1,9 @@
 ## Hi, I'm GRQZ
 Message of the day:  
-Currently Working on io_uring!
+"grqz" doesn't stand for anything. Just a combination of some random letters.
 
 
 ---
 
-Last Update: 2026-02-17 01:58:55.714568+00:00  
+Last Update: 2026-02-18 02:02:54.544294+00:00  
 [Contact Me](mailto:%67%72%71%7a%2e%64%65%76%40%70%72%6f%74%6f%6e%2e%6d%65)
