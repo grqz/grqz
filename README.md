@@ -1,9 +1,11 @@
 ## Hi, I'm GRQZ
 Message of the day:  
-> Lose performance, lose a lot, lose security, lose everything.
+```cpp
+import std;
+```
 
 
 ---
 
-Last Update: 2026-02-19 02:01:21.665519+00:00  
+Last Update: 2026-02-20 01:57:08.102022+00:00  
 [Contact Me](mailto:%67%72%71%7a%2e%64%65%76%40%70%72%6f%74%6f%6e%2e%6d%65)
