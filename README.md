@@ -1,18 +1,16 @@
 ## Hi, I'm GRQZ
 Message of the day:  
-```cpp
-import std;
-```
+Currently Working on io_uring!
 
 
 ---
 
-Last Update: 2026-05-11 00:28:15.269050+00:00  
+Last Update: 2026-05-11 00:31:32.080970+00:00  
 [Contact Me](mailto:%67%72%71%7a%2e%64%65%76%40%70%72%6f%74%6f%6e%2e%6d%65)
 
 ## "Pinned repos"
 
-[yt-dlp](/yt-dlp/yt-dlp)  
-[bgutil-ytdlp-pot-provider](/Brainicism/bgutil-ytdlp-pot-provider)  
-[yt-dlp-apple-webkit-jsi](/grqz/yt-dlp-apple-webkit-jsi)  
-[ssl_imp](/grqz/ssl_imp)
+[yt-dlp](//github.com/yt-dlp/yt-dlp)  
+[bgutil-ytdlp-pot-provider](//github.com/Brainicism/bgutil-ytdlp-pot-provider)  
+[yt-dlp-apple-webkit-jsi](//github.com/grqz/yt-dlp-apple-webkit-jsi)  
+[ssl_imp](//github.com/grqz/ssl_imp)
