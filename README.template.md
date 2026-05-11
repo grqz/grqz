@@ -9,7 +9,7 @@ Last Update: {utcDateTime}
 
 ## "Pinned repos"
 
-[yt-dlp](/yt-dlp/yt-dlp)  
-[bgutil-ytdlp-pot-provider](/Brainicism/bgutil-ytdlp-pot-provider)  
-[yt-dlp-apple-webkit-jsi](/grqz/yt-dlp-apple-webkit-jsi)  
-[ssl_imp](/grqz/ssl_imp)
+[yt-dlp](//github.com/yt-dlp/yt-dlp)  
+[bgutil-ytdlp-pot-provider](//github.com/Brainicism/bgutil-ytdlp-pot-provider)  
+[yt-dlp-apple-webkit-jsi](//github.com/grqz/yt-dlp-apple-webkit-jsi)  
+[ssl_imp](//github.com/grqz/ssl_imp)
