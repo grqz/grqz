@@ -1,14 +1,11 @@
 ## Hi, I'm GRQZ
 Message of the day:  
-```cpp
-import std;
-```
-
+{message}
 
 ---
 
-Last Update: 2026-05-11 00:28:15.269050+00:00  
-[Contact Me](mailto:%67%72%71%7a%2e%64%65%76%40%70%72%6f%74%6f%6e%2e%6d%65)
+Last Update: {utcDateTime}  
+[Contact Me](mailto:{uriEncodedEmail})
 
 ## "Pinned repos"
 
