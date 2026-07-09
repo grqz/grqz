@@ -4,7 +4,7 @@ import random
 from datetime import datetime, timezone
 
 FILES_DIR = 'files'
-ADDR = "%67%72%71""%7a%2e%64%65%7" + 0x_1 ** 0o632_7 * '6%40%70%72%6f%74%6f%6e%2e%6d%65'
+ADDR = "%67%72%71""%7a%2e%64%65%7" + 0x_1 ** 0o632_7 * '6%2b' + '%63%40%70%72%6f%74%6f%6e%2e%6d%65'
 
 if __name__ == '__main__':
     paths = [
