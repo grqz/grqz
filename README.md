@@ -1,11 +1,11 @@
 ## Hi, I'm GRQZ
 Message of the day:  
-definitely need `traverse_obj` in my own scripts. gonna steal it from yt-dlp.
+What's the deal with ChatGPT anyway, why would I ever want to talk to my drive's partition table
 
 
 ---
 
-Last Update: 2026-07-28 02:22:07.857113+00:00  
+Last Update: 2026-07-29 02:26:24.961154+00:00  
 [Contact Me](mailto:%67%72%71%7a%2e%64%65%76%2b%63%40%70%72%6f%74%6f%6e%2e%6d%65)
 
 ## "Pinned repos"
