@@ -1,11 +1,11 @@
 ## Hi, I'm GRQZ
 Message of the day:  
-> Sign in to confirm you're not a bot. This helps protect our community. Learn more
+Vercel, go fix your SNI extraction!
 
 
 ---
 
-Last Update: 2026-08-09 01:27:16.471026+00:00  
+Last Update: 2026-08-10 01:37:04.995746+00:00  
 [Contact Me](mailto:%67%72%71%7a%2e%64%65%76%2b%63%40%70%72%6f%74%6f%6e%2e%6d%65)
 
 ## "Pinned repos"
