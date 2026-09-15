@@ -13,3 +13,7 @@ Last Update: {utcDateTime}
 [bgutil-ytdlp-pot-provider](//github.com/Brainicism/bgutil-ytdlp-pot-provider)  
 [yt-dlp-apple-webkit-jsi](//github.com/grqz/yt-dlp-apple-webkit-jsi)  
 [ssl_imp](//github.com/grqz/ssl_imp)
+
+## Email archive
+
+[Email index](<email/README.md>)
