@@ -22,4 +22,4 @@
 | 16|[Hey](<0016.md>)|14 Sep 2026|
 | 17|[Hlo can you add me](<0017.md>)|14 Sep 2026|
 | 18|[Skool Video Download Tools](<0018.md>)|14 Sep 2026|
-| 19|[How to someone else's WhatsApp](<0019.md>)|15 Sep 2026|
+| 19|[How to view someone else's WhatsApp](<0019.md>)|15 Sep 2026|
