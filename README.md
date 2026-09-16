@@ -18,3 +18,7 @@ Last Update: 2026-09-16 04:29:09.268532+00:00
 ## Email archive
 
 [Email index](<email/README.md>)
+
+## Microsoft 365
+
+[Getting started with Microsoft 365](<office365-getting-started.md>)
