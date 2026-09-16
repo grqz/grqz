@@ -15,7 +15,7 @@ jobs:
     - name: Update
       run: |
         git config --global user.name "$GITHUB_REPOSITORY_OWNER"
-        git config --global user.email `python update.py`
+        git config --global user.email `python scripts/update.py`
         git add -A
         git commit -m 'Update README.md with a random message'
         git push
