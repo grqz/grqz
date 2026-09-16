@@ -18,6 +18,9 @@ ENGLISH_MONTHS = [
 def md_esc(x: str) -> str:
     return re.sub(r'[\\`*_{}\[\]<>()#+-.!|]', r'\\\g<0>', x)
 
+def md_unesc(x: str) -> str:
+    return re.sub(r'\\([\\`*_{}\[\]<>()#+-.!|])', r'\1', x)
+
 def proc_msg(x: str, ctype: str) -> str:
     if ctype.startswith('text/html'):
         out, n =re.subn(r'\n[\s\n]+', r'\n', x)
@@ -25,16 +28,19 @@ def proc_msg(x: str, ctype: str) -> str:
         return out
     return x
 
+def ls_eml() -> map[int]:
+    return map(
+        lambda y: (lambda x:
+            int(x) if all('0' <= y <= '9' for y in x)
+            else 0)(y.name.removesuffix('.md')),
+        (root / 'email').iterdir())
+
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         sys.stderr.write(f'Usage: {sys.argv[0]} <eml>\n')
         sys.exit(1)
 
-    last = max(map(
-        lambda y: (lambda x:
-            int(x) if all('0' <= y <= '9' for y in x)
-            else 0)(y.name.removesuffix('.md')),
-        (root / 'email').iterdir()))
+    last = max(ls_eml())
 
     with (root / 'email' / 'README.md').open('a') as readme:
         for nord, eml in enumerate(sys.argv[1:], 1):
@@ -47,11 +53,11 @@ if __name__ == '__main__':
                 edt = email.utils.parsedate_to_datetime(date)
                 edt = edt.astimezone(datetime.timezone.utc)
                 fdate = edt.strftime(f'%d {ENGLISH_MONTHS[edt.month - 1]} %Y')
-                readme.write(f'|{tord:4}|[{subj}](<{tord:04}.md>)|{fdate}|\n')
+                readme.write(f'|{tord:4}|[{md_esc(subj)}](<{tord:04}.md>)|{fdate}|\n')
                 body = msg.get_body(('html', 'plain'))
                 assert body is not None
                 ctype = body.get_content_type()
                 mdf.write('|Header field|Value|\n|------------|-----|\n')
-                for h, val in (('date', date), ('subject', subj), ('content-type', ctype)):
+                for h, val in (('Date', date), ('Subject', subj), ('Content-Type', ctype)):
                     mdf.write(f'|{h}|{md_esc(val)}|\n')
                 mdf.write('\n' + proc_msg(body.get_content(), ctype))

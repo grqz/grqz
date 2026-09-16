@@ -1,5 +1,12 @@
 # The grqz email collection
 
+## statistics
+```
+tz: [('+0530', 12), ('+0000', 4), ('+0200', 2), ('+0400', 2), ('+0500', 1), ('-0400', 1), ('-0500', 1)]
+has subject: [(True, 13), (False, 10)]
+ctype: [('text/html', 21), ('text/plain', 2)]
+```
+
 ## email index
 
 | ord|name|date|
@@ -23,3 +30,7 @@
 |  17|[Hlo can you add me](<0017.md>)|14 Sep 2026|
 |  18|[Skool Video Download Tools](<0018.md>)|14 Sep 2026|
 |  19|[How to view someone else's WhatsApp](<0019.md>)|15 Sep 2026|
+|  20|[Download tool](<0020.md>)|15 Sep 2026|
+|  21|[Please can you say me how to use this](<0021.md>)|15 Sep 2026|
+|  22|[How to see whose subscription you made](<0022.md>)|15 Sep 2026|
+|  23|[\.\.m\.](<0023.md>)|16 Sep 2026|
