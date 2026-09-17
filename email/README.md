@@ -34,4 +34,4 @@ ctype: [('text/html', 22), ('text/plain', 2)]
 |  21|[Please can you say me how to use this](<0021.md>)|15 Sep 2026|
 |  22|[How to see whose subscription you made](<0022.md>)|15 Sep 2026|
 |  23|[\.\.m\.](<0023.md>)|16 Sep 2026|
-|  24|[\(No Subject\)](<0024.md>)|16 Sep 2026|
+|  24|[Bruv supp](<0024.md>)|16 Sep 2026|
