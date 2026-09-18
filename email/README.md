@@ -3,9 +3,9 @@
 ## statistics
 <!--BEGIN emlstat-->
 ```py
-tz: [('+0530', 12), ('+0000', 4), ('+0500', 2), ('+0200', 2), ('+0400', 2), ('-0400', 1), ('+0300', 1), ('-0500', 1)]
-has subject: [(True, 13), (False, 12)]
-ctype: [('text/html', 23), ('text/plain', 2)]
+tz: [('+0530', 13), ('+0000', 4), ('+0500', 2), ('+0200', 2), ('+0400', 2), ('-0400', 1), ('+0300', 1), ('-0500', 1)]
+has subject: [(False, 13), (True, 13)]
+ctype: [('text/html', 24), ('text/plain', 2)]
 ```
 <!--END emlstat-->
 
@@ -38,3 +38,4 @@ ctype: [('text/html', 23), ('text/plain', 2)]
 |  23|[\.\.m\.](<0023.md>)|16 Sep 2026|
 |  24|[Bruv supp](<0024.md>)|16 Sep 2026|
 |  25|[Hi bro](<0025.md>)|18 Sep 2026|
+|  26|[An LLM-generated summary](<0026.md>)|18 Sep 2026|
