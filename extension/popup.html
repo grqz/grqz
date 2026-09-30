@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeonDL</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">NEON<b>DL</b></span>
+      <span id="hostDot" class="dot" title="Checking helper…"></span>
+    </div>
+    <button id="popout" class="icon-btn" title="Open in its own window" aria-label="Open in its own window">
+      <svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+    </button>
+  </header>
+
+  <section id="setup" class="setup" hidden>
+    <strong>Helper not found</strong>
+    <p>Run <code>install.cmd</code> from the NeonDL folder, then reopen this popup.</p>
+    <p id="setupDetail" class="muted"></p>
+  </section>
+  <section id="warn" class="warn" hidden></section>
+
+  <section class="card grab">
+    <input id="url" type="url" spellcheck="false" autocomplete="off" placeholder="Paste a video or audio link" aria-label="Link">
+    <div class="row">
+      <select id="preset" aria-label="Quality">
+        <optgroup label="Video">
+          <option value="best">Best quality</option>
+          <option value="mp4">Best MP4 (plays everywhere)</option>
+          <option value="2160">Up to 4K · MP4</option>
+          <option value="1080">Up to 1080p · MP4</option>
+          <option value="720">Up to 720p · MP4</option>
+          <option value="480">Up to 480p · MP4</option>
+        </optgroup>
+        <optgroup label="Audio only">
+          <option value="mp3">MP3 · best</option>
+          <option value="m4a">M4A · original</option>
+        </optgroup>
+      </select>
+      <label id="playlistWrap" class="check" hidden><input id="playlist" type="checkbox"> Whole playlist</label>
+    </div>
+    <div class="folder">
+      <svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <button id="dirText" class="dir" title="Open folder"></button>
+      <button id="changeDir" class="ghost">Change</button>
+    </div>
+    <label class="check"><input id="ask" type="checkbox"> Ask where to save every time</label>
+    <button id="go" class="go">Download</button>
+  </section>
+
+  <div class="list-head">
+    <h2>Downloads</h2>
+    <button id="clear" class="ghost small">Clear finished</button>
+  </div>
+  <ul id="jobs" class="jobs"></ul>
+  <p id="empty" class="empty">Nothing here yet.</p>
+
+  <footer>
+    <button id="update" class="ghost small">Update yt-dlp</button>
+    <span id="toast" class="toast" role="status"></span>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
