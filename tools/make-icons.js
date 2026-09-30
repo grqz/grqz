@@ -46,7 +46,7 @@ const SEGMENTS = [
   [0.68, 0.44, 0.5, 0.62],
   [0.26, 0.78, 0.74, 0.78], // tray
 ];
-const CYAN = [0, 240, 255], PINK = [255, 43, 214], BG = [10, 8, 22];
+const CYAN = [0, 240, 255], GREEN = [57, 255, 20], BG = [6, 10, 12];
 
 function render(size) {
   const out = Buffer.alloc(size * size * 4);
@@ -66,7 +66,7 @@ function render(size) {
           let d = Infinity;
           for (const s of SEGMENTS) d = Math.min(d, segDist(u, v, ...s));
           const t = Math.min(1, Math.max(0, (v - 0.2) / 0.6));
-          const col = CYAN.map((c, i) => c + (PINK[i] - c) * t);
+          const col = CYAN.map((c, i) => c + (GREEN[i] - c) * t);
           const core = d < stroke / 2 ? 1 : 0;
           const glow = Math.exp(-Math.max(0, d - stroke / 2) * (size <= 16 ? 40 : 18)) * 0.8;
           const k = Math.max(core, glow);

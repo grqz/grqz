@@ -278,7 +278,8 @@ function scheduleIdle() {
 function updateBadge() {
   const n = jobs.filter((j) => ACTIVE.has(j.state)).length;
   chrome.action.setBadgeText({ text: n ? String(n) : '' });
-  chrome.action.setBadgeBackgroundColor({ color: '#ff2bd6' });
+  chrome.action.setBadgeBackgroundColor({ color: '#39ff14' });
+  chrome.action.setBadgeTextColor?.({ color: '#000000' });
 }
 
 function notify(job, title, message) {
