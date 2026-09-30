@@ -1,4 +1,4 @@
-name: Build NeonDL
+name: Build CLDM
 
 on:
   push:
@@ -26,21 +26,21 @@ jobs:
 
       - name: Package
         run: |
-          New-Item -ItemType Directory NeonDL | Out-Null
-          Copy-Item host/build/Release/neondl-host.exe NeonDL/
-          Copy-Item -Recurse extension NeonDL/extension
-          Copy-Item installer/* NeonDL/
-          Compress-Archive -Path NeonDL/* -DestinationPath NeonDL-windows.zip
+          New-Item -ItemType Directory CLDM | Out-Null
+          Copy-Item host/build/Release/cldm-host.exe CLDM/
+          Copy-Item -Recurse extension CLDM/extension
+          Copy-Item installer/* CLDM/
+          Compress-Archive -Path CLDM/* -DestinationPath CLDM-windows.zip
 
       - uses: actions/upload-artifact@v4
         with:
-          name: NeonDL-windows
-          path: NeonDL-windows.zip
+          name: CLDM-windows
+          path: CLDM-windows.zip
 
       - name: Publish release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            NeonDL-windows.zip
-            host/build/Release/neondl-host.exe
+            CLDM-windows.zip
+            host/build/Release/cldm-host.exe

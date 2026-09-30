@@ -1,4 +1,4 @@
-// Renders the NeonDL icons (a glowing download arrow) to extension/icons/*.png.
+// Renders the CLDM icons (a glowing download arrow) to extension/icons/*.png.
 // Usage: node tools/make-icons.js   (no dependencies)
 'use strict';
 const fs = require('fs');

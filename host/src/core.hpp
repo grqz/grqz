@@ -23,6 +23,7 @@ struct Tools {
     std::string ytdlp;      // path to yt-dlp.exe
     std::string ffmpegDir;  // folder holding ffmpeg.exe, empty if missing
     std::string deno;       // path to deno.exe, empty if missing
+    std::string cacheDir;   // yt-dlp cache inside the install folder, empty = yt-dlp default
 };
 
 struct StartParams {
@@ -85,6 +86,7 @@ inline std::vector<std::string> buildArgs(const StartParams& p, const Tools& t) 
     };
     if (!t.ffmpegDir.empty()) { a.push_back("--ffmpeg-location"); a.push_back(t.ffmpegDir); }
     if (!t.deno.empty()) { a.push_back("--js-runtimes"); a.push_back("deno:" + t.deno); }
+    if (!t.cacheDir.empty()) { a.push_back("--cache-dir"); a.push_back(t.cacheDir); }
     for (auto& s : presetArgs(p.preset)) a.push_back(s);
     a.push_back("--");
     a.push_back(p.url);

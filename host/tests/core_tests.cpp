@@ -44,6 +44,7 @@ static void testArgs() {
     t.ytdlp = "C:\\x\\yt-dlp.exe";
     t.ffmpegDir = "C:\\x\\ffmpeg";
     t.deno = "C:\\x\\deno.exe";
+    t.cacheDir = "D:\\CLDM\\cache\\yt-dlp";
     auto a = core::buildArgs(p, t);
     CHECK(a.size() >= 2);
     CHECK(a[a.size() - 2] == "--");
@@ -56,6 +57,8 @@ static void testArgs() {
     CHECK(has("deno:C:\\x\\deno.exe"));
     CHECK(has("C:\\x\\ffmpeg"));
     CHECK(has("mp3"));
+    CHECK(has("--cache-dir"));
+    CHECK(has("D:\\CLDM\\cache\\yt-dlp"));
     CHECK(core::validPreset("1080"));
     CHECK(!core::validPreset("rm -rf"));
     std::string cmd = core::buildCommandLine(t.ytdlp, a);

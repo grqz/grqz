@@ -1,7 +1,7 @@
-// NeonDL background worker: owns the native helper connection and the download list.
+// CLDM background worker: owns the native helper connection and the download list.
 'use strict';
 
-const HOST = 'com.neondl.host';
+const HOST = 'com.cldm.host';
 const MAX_PARALLEL = 3;
 const IDLE_MS = 15000;
 const RUNNING = new Set(['starting', 'downloading', 'processing', 'pausing', 'canceling']);
@@ -137,7 +137,7 @@ function pump() {
     if (running >= MAX_PARALLEL) break;
     Object.assign(job, { state: 'starting', error: '', phase: '' });
     if (!post({ type: 'start', id: job.id, url: job.url, dir: job.dir, preset: job.preset, playlist: job.playlist })) {
-      Object.assign(job, { state: 'error', error: 'The NeonDL helper is not installed. Run install.cmd.' });
+      Object.assign(job, { state: 'error', error: 'The CLDM helper is not installed. Run install.cmd.' });
       continue;
     }
     running++;
@@ -155,7 +155,7 @@ function pickFolder(initial) {
 
 async function download({ url, preset, playlist }) {
   if (!/^https?:\/\//i.test(url || '')) return toast('That is not a web link.');
-  if (!connect()) return toast('The NeonDL helper is not installed.');
+  if (!connect()) return toast('The CLDM helper is not installed.');
   let dir = settings.dir || host.downloads || '';
   if (settings.ask || !dir) {
     dir = await pickFolder(dir);
@@ -308,8 +308,8 @@ chrome.runtime.onConnect.addListener(async (p) => {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-    id: 'neondl',
-    title: 'Download with NeonDL',
+    id: 'cldm',
+    title: 'Download with CLDM',
     contexts: ['page', 'link', 'video', 'audio', 'frame'],
   });
 });

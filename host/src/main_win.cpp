@@ -1,4 +1,4 @@
-// NeonDL native messaging host (Windows).
+// CLDM native messaging host (Windows).
 // Brave talks to this over stdin/stdout; it runs yt-dlp and reports progress.
 #ifndef UNICODE
 #define UNICODE
@@ -15,6 +15,7 @@
 
 #include <atomic>
 #include <cstdint>
+#include <initializer_list>
 #include <map>
 #include <memory>
 #include <mutex>
@@ -27,7 +28,7 @@
 
 namespace {
 
-constexpr const char* kVersion = "0.1.0";
+constexpr const char* kVersion = "0.2.0";
 
 HANDLE g_stdout = nullptr;
 std::mutex g_outMutex;
@@ -107,13 +108,66 @@ std::wstring exeDir() {
     return slash == std::wstring::npos ? L"." : p.substr(0, slash);
 }
 
+std::wstring parentDir(const std::wstring& p) {
+    size_t slash = p.find_last_of(L"\\/");
+    return slash == std::wstring::npos ? L"" : p.substr(0, slash);
+}
+
+// config.json next to the exe (written by install.ps1) can point at tools kept
+// elsewhere, e.g. {"ffmpeg": "D:\\Tools\\ffmpeg\\bin"}. Every key is optional.
+json::Value readConfig() {
+    json::Value cfg;
+    HANDLE f = CreateFileW((exeDir() + L"\\config.json").c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr,
+                           OPEN_EXISTING, 0, nullptr);
+    if (f == INVALID_HANDLE_VALUE) return cfg;
+    std::string text;
+    char buf[4096];
+    DWORD n = 0;
+    while (ReadFile(f, buf, sizeof buf, &n, nullptr) && n) text.append(buf, n);
+    CloseHandle(f);
+    if (text.compare(0, 3, "\xEF\xBB\xBF") == 0) text.erase(0, 3);  // tolerate a BOM
+    json::parse(text, cfg);
+    return cfg;
+}
+
+// Finds `exe` from a configured path (the exe itself, its folder, or folder\bin),
+// then the given default locations, then PATH.
+std::wstring locate(const json::Value& cfg, const char* key, const wchar_t* exe,
+                    std::initializer_list<std::wstring> defaults) {
+    std::wstring c = widen(cfg[key].str());
+    if (!c.empty()) {
+        for (const std::wstring& cand : {c, c + L"\\" + exe, c + L"\\bin\\" + exe})
+            if (fileExists(cand)) return cand;
+    }
+    for (auto& d : defaults)
+        if (fileExists(d)) return d;
+    wchar_t buf[MAX_PATH];
+    DWORD n = SearchPathW(nullptr, exe, nullptr, MAX_PATH, buf, nullptr);
+    return (n && n < MAX_PATH) ? std::wstring(buf, n) : L"";
+}
+
 core::Tools findTools() {
-    std::wstring bin = exeDir() + L"\\bin";
+    std::wstring root = exeDir(), bin = root + L"\\bin";
+    json::Value cfg = readConfig();
     core::Tools t;
-    if (fileExists(bin + L"\\yt-dlp.exe")) t.ytdlp = narrow(bin + L"\\yt-dlp.exe");
-    if (fileExists(bin + L"\\ffmpeg\\ffmpeg.exe")) t.ffmpegDir = narrow(bin + L"\\ffmpeg");
-    if (fileExists(bin + L"\\deno.exe")) t.deno = narrow(bin + L"\\deno.exe");
+    t.ytdlp = narrow(locate(cfg, "ytdlp", L"yt-dlp.exe", {bin + L"\\yt-dlp\\yt-dlp.exe", bin + L"\\yt-dlp.exe"}));
+    t.ffmpegDir = narrow(parentDir(locate(cfg, "ffmpeg", L"ffmpeg.exe", {bin + L"\\ffmpeg\\ffmpeg.exe"})));
+    t.deno = narrow(locate(cfg, "deno", L"deno.exe", {bin + L"\\deno.exe"}));
+    if (dirExists(root + L"\\cache")) t.cacheDir = narrow(root + L"\\cache\\yt-dlp");
     return t;
+}
+
+// Keeps Deno's cache and any temp files inside the install folder instead of
+// %LOCALAPPDATA% / %TEMP%. Child processes inherit these variables.
+void useLocalCache() {
+    std::wstring cache = exeDir() + L"\\cache";
+    std::wstring tmp = cache + L"\\tmp", deno = cache + L"\\deno";
+    SHCreateDirectoryExW(nullptr, tmp.c_str(), nullptr);
+    SHCreateDirectoryExW(nullptr, deno.c_str(), nullptr);
+    if (!dirExists(tmp) || !dirExists(deno)) return;  // read-only install folder: keep Windows defaults
+    SetEnvironmentVariableW(L"TEMP", tmp.c_str());
+    SetEnvironmentVariableW(L"TMP", tmp.c_str());
+    SetEnvironmentVariableW(L"DENO_DIR", deno.c_str());
 }
 
 std::string downloadsFolder() {
@@ -327,7 +381,7 @@ void startJob(const json::Value& msg) {
         return sendError(id, "Cannot create folder: " + p.dir);
 
     core::Tools tools = findTools();
-    if (tools.ytdlp.empty()) return sendError(id, "yt-dlp.exe is missing. Run install.cmd again.");
+    if (tools.ytdlp.empty()) return sendError(id, "yt-dlp.exe not found. Run install.cmd again.");
 
     auto job = std::make_shared<Job>();
     job->id = id;
@@ -439,7 +493,7 @@ std::string showFolderDialog(const std::string& initial) {
     DWORD opts = 0;
     dlg->GetOptions(&opts);
     dlg->SetOptions(opts | FOS_PICKFOLDERS | FOS_FORCEFILESYSTEM | FOS_PATHMUSTEXIST);
-    dlg->SetTitle(L"NeonDL — where should this download go?");
+    dlg->SetTitle(L"CLDM — where should this download go?");
     dlg->SetOkButtonLabel(L"Save here");
     std::wstring winit = widen(initial);
     if (!winit.empty() && dirExists(winit)) {
@@ -511,22 +565,28 @@ void openPath(const json::Value& msg) {
     }
 }
 
+// The folder build of yt-dlp can't self-update, so this re-runs the installer's
+// yt-dlp step, which downloads the latest release into bin\\yt-dlp.
 void updateYtdlp() {
     std::thread([] {
-        core::Tools t = findTools();
-        if (t.ytdlp.empty()) {
-            send(json::Obj().s("type", "updated").b("ok", false).s("text", "yt-dlp.exe is missing.").done());
+        std::wstring script = exeDir() + L"\\install.ps1";
+        if (!fileExists(script)) {
+            send(json::Obj().s("type", "updated").b("ok", false).s("text", "install.ps1 is missing from the CLDM folder.").done());
             return;
         }
+        wchar_t sys[MAX_PATH];
+        UINT n = GetSystemDirectoryW(sys, MAX_PATH);
+        std::string ps = narrow(std::wstring(sys, n) + L"\\WindowsPowerShell\\v1.0\\powershell.exe");
         Process proc;
         std::string error, text;
-        if (!spawn(t.ytdlp, {"-U"}, L"", proc, error)) {
+        if (!spawn(ps, {"-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", narrow(script), "-UpdateYtdlp"},
+                   exeDir(), proc, error)) {
             send(json::Obj().s("type", "updated").b("ok", false).s("text", error).done());
             return;
         }
         readLines(proc.output, [&](const std::string& line) { text = line; });
         CloseHandle(proc.output);
-        WaitForSingleObject(proc.process, 120000);
+        WaitForSingleObject(proc.process, 300000);
         DWORD code = 1;
         GetExitCodeProcess(proc.process, &code);
         CloseHandle(proc.jobObject);
@@ -551,6 +611,7 @@ void handle(const std::string& raw) {
 
 int main() {
     SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);
+    useLocalCache();
     g_stdout = GetStdHandle(STD_OUTPUT_HANDLE);
     HANDLE in = GetStdHandle(STD_INPUT_HANDLE);
 
