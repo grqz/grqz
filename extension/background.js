@@ -68,7 +68,10 @@ function setHost(next) {
 function onHostMessage(m) {
   if (m.type === 'hello') {
     if (!settings.dir && m.downloads) settings.dir = m.downloads;
-    setHost({ status: 'ok', error: '', ytdlp: m.ytdlp, ffmpeg: m.ffmpeg, deno: m.deno, version: m.version, downloads: m.downloads });
+    setHost({
+      status: 'ok', error: '', ytdlp: m.ytdlp, ffmpeg: m.ffmpeg, deno: m.deno, version: m.version, downloads: m.downloads,
+      ffmpegPath: m.ffmpegPath || '', ffmpegError: m.ffmpegError || '',
+    });
     broadcast({ type: 'settings', settings });
     pump();
     return;
@@ -91,7 +94,7 @@ function onHostMessage(m) {
       if (job.state === 'starting') job.phase = '';
       break;
     case 'info':
-      if (m.title) job.title = m.title;
+      if (m.title && !job.name) job.title = m.title;
       job.item = m.count ? `${Number(m.index) || m.index}/${m.count}` : '';
       break;
     case 'dest':
@@ -111,7 +114,7 @@ function onHostMessage(m) {
       job.file = m.file;
       break;
     case 'done':
-      Object.assign(job, { state: 'done', pct: 100, speed: -1, eta: -1, finished: Date.now() });
+      Object.assign(job, { state: 'done', pct: 100, speed: -1, eta: -1, size: m.size ?? -1, finished: Date.now() });
       notify(job, 'Download complete', job.title || job.url);
       break;
     case 'error':
@@ -136,7 +139,7 @@ function pump() {
   for (const job of queued) {
     if (running >= MAX_PARALLEL) break;
     Object.assign(job, { state: 'starting', error: '', phase: '' });
-    if (!post({ type: 'start', id: job.id, url: job.url, dir: job.dir, preset: job.preset, playlist: job.playlist })) {
+    if (!post({ type: 'start', id: job.id, url: job.url, dir: job.dir, preset: job.preset, playlist: job.playlist, name: job.name || '' })) {
       Object.assign(job, { state: 'error', error: 'The CLDM helper is not installed. Run install.cmd.' });
       continue;
     }
@@ -153,7 +156,7 @@ function pickFolder(initial) {
 
 // ---------- commands from the popup ----------
 
-async function download({ url, preset, playlist }) {
+async function download({ url, preset, playlist, name }) {
   if (!/^https?:\/\//i.test(url || '')) return toast('That is not a web link.');
   if (!connect()) return toast('The CLDM helper is not installed.');
   let dir = settings.dir || host.downloads || '';
@@ -163,8 +166,8 @@ async function download({ url, preset, playlist }) {
   }
   settings = { ...settings, dir, preset };
   jobs.unshift({
-    id: crypto.randomUUID(), url, preset, playlist: !!playlist, dir,
-    title: '', item: '', state: 'queued', phase: '', error: '', file: '', files: [],
+    id: crypto.randomUUID(), url, preset, playlist: !!playlist, dir, name: String(name || '').trim(),
+    title: String(name || '').trim(), item: '', state: 'queued', phase: '', error: '', file: '', files: [],
     pct: -1, done: -1, total: -1, speed: -1, eta: -1, stream: '', created: Date.now(),
   });
   broadcast({ type: 'settings', settings });
@@ -222,6 +225,8 @@ function command(msg) {
       settings = { ...settings, ...pick(msg.settings, ['ask', 'preset']) };
       broadcast({ type: 'settings', settings });
       return scheduleSave();
+    case 'openWindow':
+      return openWindow(msg.url, msg.title);
     case 'update':
       if (jobs.some((j) => RUNNING.has(j.state))) return toast('Finish or pause downloads before updating.');
       if (post({ type: 'update' })) toast('Updating yt-dlp…');
@@ -315,13 +320,32 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-chrome.contextMenus.onClicked.addListener((info) => {
+// One CLDM window at most: later requests focus it and fill in the new link.
+async function openWindow(url = '', title = '') {
+  const { cldmWindow } = await chrome.storage.session.get('cldmWindow');
+  if (cldmWindow) {
+    try {
+      await chrome.windows.update(cldmWindow, { focused: true, drawAttention: true });
+      broadcast({ type: 'prefill', url, title });
+      return;
+    } catch { /* it was closed */ }
+  }
+  const q = new URLSearchParams({ window: '1', url, title });
+  const win = await chrome.windows.create({ url: `popup.html?${q}`, type: 'popup', width: 440, height: 700, focused: true });
+  await chrome.storage.session.set({ cldmWindow: win.id });
+}
+
+chrome.windows.onRemoved.addListener(async (id) => {
+  const { cldmWindow } = await chrome.storage.session.get('cldmWindow');
+  if (cldmWindow === id) await chrome.storage.session.remove('cldmWindow');
+});
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
   const src = info.srcUrl && /^https?:/i.test(info.srcUrl) ? info.srcUrl : '';
   const url = info.linkUrl || src || info.frameUrl || info.pageUrl || '';
-  chrome.windows.create({
-    url: `popup.html?url=${encodeURIComponent(url)}`,
-    type: 'popup', width: 440, height: 660, focused: true,
-  });
+  // The tab title only describes the page itself, not a link on it.
+  const title = url === info.pageUrl ? tab?.title || '' : '';
+  openWindow(url, title);
 });
 
 chrome.notifications.onClicked.addListener(async (id) => {

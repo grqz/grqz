@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "CLDM",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Download video and audio from the page you're on, powered by yt-dlp.",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvgvznWE9qX9kMjFy+/xp0Yk4D7eElqZ2mKADPbpDAJm4Qn45k8RWg+VTXisX0Xpyp+Q9WO5KABVHHSLDr4a4aj0d4N+UCHpl1GvqcT5Ve0f4iwbgmP3NfhybftNrxQPV10Wu8ihl0halHaE++nyP8hzwsZGvEJ2DAFCmu5IFZPSFE5mLLDQciIzUIIMdaBYiXnFMrhT3L97r7lyue9IbvtYRtlRmFz7HxpFCPJU+avHS0R6G3TOPgtVHOifO45rnDnetpKRyDpVsdVQwAfLn09XW7jaYi+COQ+Y3mzF57c25mv0MqSacHAwwTaZtXt7atEM4hdruYAmtFSael1OhmQIDAQAB",
   "minimum_chrome_version": "116",

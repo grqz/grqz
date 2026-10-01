@@ -30,8 +30,59 @@ struct StartParams {
     std::string url;
     std::string dir;
     std::string preset;
+    std::string name;  // optional file name chosen by the user (no extension)
     bool playlist = false;
 };
+
+// Turns a user-typed name into a safe Windows file name for yt-dlp's -o template:
+// strips characters Windows forbids, a typed media extension (yt-dlp adds the real
+// one), trailing dots/spaces and device names, caps the length, and escapes '%'.
+// Returns "" when nothing usable is left.
+inline std::string sanitizeFileName(const std::string& in) {
+    std::string out;
+    for (unsigned char c : in) {
+        if (c < 0x20 || c == 0x7F || std::string("<>:\"/\\|?*").find(char(c)) != std::string::npos) c = '_';
+        if (c == ' ' && (out.empty() || out.back() == ' ')) continue;
+        out += char(c);
+    }
+    auto trimEnd = [&] { while (!out.empty() && (out.back() == ' ' || out.back() == '.')) out.pop_back(); };
+    trimEnd();
+    static const char* kExts[] = {".mp4", ".mkv", ".webm", ".mp3", ".m4a", ".opus", ".ogg", ".wav",
+                                  ".flac", ".aac", ".mov", ".avi", ".flv", ".ts"};
+    for (const char* ext : kExts) {
+        size_t n = std::char_traits<char>::length(ext);
+        if (out.size() > n) {
+            std::string tail = out.substr(out.size() - n);
+            for (auto& ch : tail) if (ch >= 'A' && ch <= 'Z') ch = char(ch - 'A' + 'a');
+            if (tail == ext) { out.erase(out.size() - n); trimEnd(); break; }
+        }
+    }
+    if (out.size() > 150) {  // cut on a UTF-8 character boundary
+        size_t cut = 150;
+        while (cut > 0 && (static_cast<unsigned char>(out[cut]) & 0xC0) == 0x80) --cut;
+        out.erase(cut);
+        trimEnd();
+    }
+    std::string base = out.substr(0, out.find('.'));
+    for (auto& ch : base) if (ch >= 'a' && ch <= 'z') ch = char(ch - 'a' + 'A');
+    static const char* kReserved[] = {"CON", "PRN", "AUX", "NUL", "COM1", "COM2", "COM3", "COM4", "COM5", "COM6",
+                                      "COM7", "COM8", "COM9", "LPT1", "LPT2", "LPT3", "LPT4", "LPT5", "LPT6",
+                                      "LPT7", "LPT8", "LPT9"};
+    for (const char* r : kReserved)
+        if (base == r) { out = "_" + out; break; }
+    std::string escaped;
+    for (char c : out) {
+        if (c == '%') escaped += '%';
+        escaped += c;
+    }
+    return escaped;
+}
+
+// yt-dlp prints this (exit code still 0) when it cannot use ffmpeg to merge the
+// separate video and audio streams, leaving two files behind.
+inline bool isMergeSkippedWarning(const std::string& line) {
+    return line.find("won't be merged") != std::string::npos;
+}
 
 inline bool startsWithNoCase(const std::string& s, const char* prefix) {
     size_t i = 0;
@@ -54,7 +105,8 @@ inline bool isHttpUrl(const std::string& url) {
 
 inline std::vector<std::string> presetArgs(const std::string& preset) {
     auto capped = [](const char* h) {
-        std::string f = std::string("bv*[height<=") + h + "]+ba/b[height<=" + h + "]/b";
+        // "<=?" also accepts formats whose height the site doesn't report.
+        std::string f = std::string("bv*[height<=?") + h + "]+ba/b[height<=?" + h + "]/bv*+ba/b";
         return std::vector<std::string>{"-t", "mp4", "-f", f};
     };
     if (preset == "best") return {"-f", "bv*+ba/b"};
@@ -70,6 +122,12 @@ inline std::vector<std::string> presetArgs(const std::string& preset) {
 
 inline bool validPreset(const std::string& preset) { return !presetArgs(preset).empty(); }
 
+inline std::string outputTemplate(const StartParams& p) {
+    std::string name = sanitizeFileName(p.name);
+    if (name.empty()) return "%(title).150B [%(id)s].%(ext)s";
+    return name + (p.playlist ? " - %(playlist_index)s" : "") + ".%(ext)s";
+}
+
 // Arguments after argv[0]. The URL always follows "--" so it can never be read as an option.
 inline std::vector<std::string> buildArgs(const StartParams& p, const Tools& t) {
     std::vector<std::string> a = {
@@ -81,7 +139,7 @@ inline std::vector<std::string> buildArgs(const StartParams& p, const Tools& t) 
         "--print", kFileTemplate,
         "-N", "8", "--no-mtime",
         "-P", p.dir,
-        "-o", "%(title).150B [%(id)s].%(ext)s",
+        "-o", outputTemplate(p),
         p.playlist ? "--yes-playlist" : "--no-playlist",
     };
     if (!t.ffmpegDir.empty()) { a.push_back("--ffmpeg-location"); a.push_back(t.ffmpegDir); }

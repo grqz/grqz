@@ -50,8 +50,10 @@ To uninstall, run `uninstall.cmd` in the CLDM folder (it removes the registry en
 
 ## Use
 
-- Click the toolbar icon: the current tab's link is filled in. Pick a quality and press **Download**.
-- Or right-click a page, link or video and choose **Download with CLDM**.
+- Click the toolbar icon: the current tab's link and title are filled in. Pick a quality and press **Download**.
+- **File name**: edit the box to rename the download (the extension is added for you). Leave it empty to use the site's title.
+- Or right-click a page, link or video and choose **Download with CLDM**. This reuses one CLDM window instead of opening a new one each time.
+- If video and audio come as separate streams and ffmpeg can't merge them, the item turns red instead of showing *Saved*. Fix ffmpeg (the popup says what's wrong with it), then press **Try again**: it only merges and doesn't download again.
 - **Pause** stops the download and keeps the partial file. **Resume** continues where it stopped (on servers that support it, which includes YouTube).
 - **Cancel** stops the download and deletes the partial files.
 - If Brave is closed mid-download, the item shows as *interrupted*; press play to continue.

@@ -67,7 +67,7 @@ function metaText(j) {
     case 'paused': return ['Paused', pct].filter(Boolean).join(' · ');
     case 'interrupted': return 'Stopped when the browser closed. Press play to continue.';
     case 'error': return j.error || 'Failed';
-    case 'done': return `Saved · ${fileName(j.file) || j.dir}`;
+    case 'done': return ['Saved', bytes(j.size), fileName(j.file) || j.dir].filter(Boolean).join(' · ');
     default: return '';
   }
 }
@@ -184,7 +184,11 @@ function renderHost() {
   const missing = [];
   if (s === 'ok') {
     if (!host.ytdlp) missing.push('yt-dlp.exe (nothing can download)');
-    if (!host.ffmpeg) missing.push('ffmpeg (no merging above 720p, no MP3)');
+    if (!host.ffmpeg) {
+      missing.push(host.ffmpegPath
+        ? `a working ffmpeg: ${host.ffmpegPath} won't run (${host.ffmpegError}), so video and audio can't be merged`
+        : 'ffmpeg (video and audio can\'t be merged, no MP3)');
+    }
     if (!host.deno) missing.push('Deno (YouTube may fail or show fewer formats)');
   }
   $('warn').hidden = !missing.length;
@@ -233,6 +237,9 @@ bg.onMessage.addListener((m) => {
       host = m.host;
       renderHost();
       break;
+    case 'prefill':
+      if (windowed) prefill(m.url, m.title);
+      break;
     case 'toast':
       toast(m.text);
       break;
@@ -244,7 +251,8 @@ bg.onMessage.addListener((m) => {
 $('go').addEventListener('click', () => {
   const url = $('url').value.trim();
   if (!/^https?:\/\//i.test(url)) return toast('Paste a web link first.');
-  send({ cmd: 'download', url, preset: $('preset').value, playlist: $('playlist').checked });
+  send({ cmd: 'download', url, preset: $('preset').value, playlist: $('playlist').checked, name: $('name').value.trim() });
+  setName('');
   if (settings.ask === false) toast('Added to downloads.');
 });
 $('url').addEventListener('input', updatePlaylistToggle);
@@ -259,23 +267,45 @@ $('dirText').addEventListener('click', () => send({ cmd: 'openDir' }));
 $('clear').addEventListener('click', () => send({ cmd: 'clearFinished' }));
 $('update').addEventListener('click', () => send({ cmd: 'update' }));
 $('popout').addEventListener('click', () => {
-  const url = $('url').value.trim();
-  chrome.windows.create({
-    url: `popup.html?window=1&url=${encodeURIComponent(url)}`, type: 'popup', width: 440, height: 660,
-  });
+  send({ cmd: 'openWindow', url: $('url').value.trim(), title: $('name').value.trim() });
   if (!windowed) window.close();
 });
+// A name filled in from the page title is dropped when the link is changed by hand.
+$('name').addEventListener('input', () => { nameIsAuto = false; });
+$('url').addEventListener('input', () => { if (nameIsAuto) setName(''); });
 if (windowed) $('popout').hidden = true;
 
-// Prefill the link: context-menu windows pass it in, the toolbar popup uses the current tab.
+// Page titles carry extras like "(3) " unread counts and " - YouTube".
+function cleanTitle(t) {
+  return String(t || '')
+    .replace(/^\(\d+\)\s*/, '')
+    .replace(/\s+[-|–—]\s+(YouTube|Vimeo|Dailymotion|Twitch|Facebook|Instagram|X|Twitter|TikTok|Reddit|SoundCloud)\s*$/i, '')
+    .trim();
+}
+
+let nameIsAuto = false;
+function setName(value, auto = false) {
+  $('name').value = value;
+  nameIsAuto = auto && !!value;
+}
+
+function prefill(url, title) {
+  if (!/^https?:\/\//i.test(url || '')) return;
+  $('url').value = url;
+  setName(cleanTitle(title), true);
+  updatePlaylistToggle();
+}
+
+// Prefill the link: the CLDM window gets it passed in, the toolbar popup uses the current tab.
 (async () => {
   let url = params.get('url') || '';
+  let title = params.get('title') || '';
   if (!url && !windowed) {
     try {
       const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
       url = tab?.url || '';
+      title = tab?.title || '';
     } catch { /* no tab access */ }
   }
-  if (/^https?:\/\//i.test(url)) $('url').value = url;
-  updatePlaylistToggle();
+  prefill(url, title);
 })();

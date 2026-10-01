@@ -114,6 +114,39 @@ static void testParse() {
     CHECK(core::parseLine("NDLP|broken").kind == core::LineKind::Other);
 }
 
+static void testFileName() {
+    using core::sanitizeFileName;
+    CHECK(sanitizeFileName("My Video") == "My Video");
+    CHECK(sanitizeFileName("  a:b/c\\d*e?f\"g<h>i|j  ") == "a_b_c_d_e_f_g_h_i_j");
+    CHECK(sanitizeFileName("Song.MP3") == "Song");
+    CHECK(sanitizeFileName("clip.final.mp4") == "clip.final");
+    CHECK(sanitizeFileName("ends with dots...") == "ends with dots");
+    CHECK(sanitizeFileName("100% real") == "100%% real");
+    CHECK(sanitizeFileName("con") == "_con");
+    CHECK(sanitizeFileName("Lpt1.txt") == "_Lpt1.txt");
+    CHECK(sanitizeFileName("a   b") == "a b");
+    CHECK(sanitizeFileName("   ") == "");
+    CHECK(sanitizeFileName(".mp4") == ".mp4" || sanitizeFileName(".mp4").empty());
+    std::string longName(200, 'x');
+    CHECK(sanitizeFileName(longName).size() == 150);
+    std::string utf8;  // 100 x "é" (2 bytes each): must not be cut mid-character
+    for (int i = 0; i < 100; ++i) utf8 += "\xC3\xA9";
+    CHECK(sanitizeFileName(utf8).size() == 150);
+    CHECK(sanitizeFileName("\xE6\x97\xA5\xE6\x9C\xAC") == "\xE6\x97\xA5\xE6\x9C\xAC");
+
+    core::StartParams p;
+    p.name = "Holiday: day 1.mp4";
+    CHECK(core::outputTemplate(p) == "Holiday_ day 1.%(ext)s");
+    p.playlist = true;
+    CHECK(core::outputTemplate(p) == "Holiday_ day 1 - %(playlist_index)s.%(ext)s");
+    p.name = "";
+    CHECK(core::outputTemplate(p) == "%(title).150B [%(id)s].%(ext)s");
+
+    CHECK(core::isMergeSkippedWarning(
+        "WARNING: You have requested merging of multiple formats but ffmpeg is not installed. The formats won't be merged"));
+    CHECK(!core::isMergeSkippedWarning("WARNING: [youtube] nsig extraction failed"));
+}
+
 static void testInsideDir() {
     CHECK(core::isInsideDir("C:\\Downloads", "C:\\Downloads\\a.mp4"));
     CHECK(core::isInsideDir("C:\\Downloads\\", "c:\\downloads\\sub\\a.mp4"));
@@ -150,6 +183,7 @@ int main() {
     testUrl();
     testArgs();
     testParse();
+    testFileName();
     testInsideDir();
     testJson();
     if (failures) {

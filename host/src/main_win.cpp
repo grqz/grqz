@@ -28,7 +28,7 @@
 
 namespace {
 
-constexpr const char* kVersion = "0.2.0";
+constexpr const char* kVersion = "0.3.0";
 
 HANDLE g_stdout = nullptr;
 std::mutex g_outMutex;
@@ -266,6 +266,7 @@ void readLines(HANDLE pipe, OnLine onLine) {
 struct Job {
     std::string id;
     std::string dir;
+    bool playlist = false;
     Process proc;
     std::mutex mutex;
     std::vector<std::string> files;  // destinations yt-dlp started writing
@@ -297,7 +298,7 @@ void cleanupFiles(const std::string& dir, const std::vector<std::string>& files)
 }
 
 void watchJob(std::shared_ptr<Job> job) {
-    std::string lastError, lastLine, finalFile, currentFile;
+    std::string lastError, lastLine, finalFile, currentFile, mergeWarning;
     readLines(job->proc.output, [&](const std::string& raw) {
         core::Line l = core::parseLine(raw);
         switch (l.kind) {
@@ -330,6 +331,7 @@ void watchJob(std::shared_ptr<Job> job) {
                 break;
             case core::LineKind::Other:
                 if (l.text.compare(0, 9, "WARNING: ") != 0) lastLine = l.text;
+                else if (core::isMergeSkippedWarning(l.text)) mergeWarning = l.text.substr(9);
                 break;
         }
     });
@@ -350,8 +352,19 @@ void watchJob(std::shared_ptr<Job> job) {
             cleanupFiles(job->dir, job->files);
         }
         send(json::Obj().s("type", "stopped").s("id", job->id).b("canceled", job->cancel).done());
+    } else if (code == 0 && !mergeWarning.empty()) {
+        // yt-dlp exits 0 here, but the user got two separate files instead of one video.
+        sendError(job->id, "Video and audio were saved as separate files because ffmpeg could not merge them. "
+                           "Fix ffmpeg (see the warning at the top), then press Try again: it only merges, "
+                           "nothing is downloaded again.");
+    } else if (code == 0 && !job->playlist && !finalFile.empty() && !fileExists(widen(finalFile))) {
+        sendError(job->id, "yt-dlp finished but the file is missing: " + finalFile);
     } else if (code == 0) {
-        send(json::Obj().s("type", "done").s("id", job->id).s("file", finalFile).done());
+        WIN32_FILE_ATTRIBUTE_DATA fa{};
+        double size = -1;
+        if (!finalFile.empty() && GetFileAttributesExW(widen(finalFile).c_str(), GetFileExInfoStandard, &fa))
+            size = double((uint64_t(fa.nFileSizeHigh) << 32) | fa.nFileSizeLow);
+        send(json::Obj().s("type", "done").s("id", job->id).s("file", finalFile).n("size", size).done());
     } else {
         std::string msg = !lastError.empty() ? lastError
                         : !lastLine.empty()  ? lastLine
@@ -372,6 +385,7 @@ void startJob(const json::Value& msg) {
     p.dir = msg["dir"].str();
     p.preset = msg["preset"].str("best");
     p.playlist = msg["playlist"].boolean();
+    p.name = msg["name"].str();
 
     if (!core::isHttpUrl(p.url)) return sendError(id, "Only http(s) links can be downloaded.");
     if (!core::validPreset(p.preset)) return sendError(id, "Unknown quality preset: " + p.preset);
@@ -386,6 +400,7 @@ void startJob(const json::Value& msg) {
     auto job = std::make_shared<Job>();
     job->id = id;
     job->dir = p.dir;
+    job->playlist = p.playlist;
     {
         std::lock_guard<std::mutex> lock(g_jobsMutex);
         if (g_jobs.count(id)) return;  // already running
@@ -544,10 +559,40 @@ void pickFolder(const json::Value& msg) {
 
 // ---------- misc commands ----------
 
+struct FfmpegCheck {
+    bool ok = false;
+    std::string path, version, error;
+};
+
+// Runs "ffmpeg -version" once per helper start. A file that exists but won't run
+// (missing DLLs, wrong architecture) makes yt-dlp skip merging silently.
+FfmpegCheck checkFfmpeg(const core::Tools& t) {
+    FfmpegCheck c;
+    if (t.ffmpegDir.empty()) { c.error = "not found"; return c; }
+    c.path = t.ffmpegDir + "\\ffmpeg.exe";
+    Process proc;
+    std::string error;
+    if (!spawn(c.path, {"-version"}, L"", proc, error)) { c.error = error; return c; }
+    if (WaitForSingleObject(proc.process, 10000) == WAIT_TIMEOUT) TerminateJobObject(proc.jobObject, 1);
+    readLines(proc.output, [&](const std::string& line) { if (c.version.empty()) c.version = line; });
+    DWORD code = 1;
+    GetExitCodeProcess(proc.process, &code);
+    CloseHandle(proc.output);
+    CloseHandle(proc.jobObject);
+    CloseHandle(proc.process);
+    if (code == 0 && c.version.compare(0, 14, "ffmpeg version") == 0) { c.ok = true; return c; }
+    if (code == 0xC0000135) c.error = "a DLL it needs is missing (copy the whole ffmpeg bin folder, not just ffmpeg.exe)";
+    else if (code == 0xC000007B) c.error = "it is a 32-bit/64-bit mismatch";
+    else c.error = "it exited with code " + std::to_string(code);
+    return c;
+}
+
 void hello() {
     core::Tools t = findTools();
+    static FfmpegCheck ff = checkFfmpeg(t);
     send(json::Obj().s("type", "hello").s("version", kVersion)
-             .b("ytdlp", !t.ytdlp.empty()).b("ffmpeg", !t.ffmpegDir.empty()).b("deno", !t.deno.empty())
+             .b("ytdlp", !t.ytdlp.empty()).b("deno", !t.deno.empty())
+             .b("ffmpeg", ff.ok).s("ffmpegPath", ff.path).s("ffmpegError", ff.error).s("ffmpegVersion", ff.version)
              .s("downloads", downloadsFolder()).done());
 }
 

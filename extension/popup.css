@@ -72,6 +72,14 @@ select option, select optgroup { background: var(--panel); }
 .check input { accent-color: var(--green); margin: 0; }
 
 .folder { display: flex; align-items: center; gap: 8px; color: var(--cyan); min-width: 0; }
+.namebox {
+  display: flex; align-items: center; gap: 8px; color: var(--cyan);
+  background: #080c0d; border: 1px solid var(--line); border-radius: 8px; padding: 0 10px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.namebox:focus-within { border-color: var(--cyan); box-shadow: var(--glow-cyan); }
+.namebox input { flex: 1; min-width: 0; background: none; border: 0; outline: none; padding: 8px 0; }
+.namebox .ext { color: var(--muted); font-size: 12px; }
 .dir {
   flex: 1; min-width: 0; text-align: left; background: none; border: 0; padding: 0;
   color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
