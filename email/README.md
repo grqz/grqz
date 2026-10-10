@@ -3,9 +3,9 @@
 ## statistics
 <!--BEGIN emlstat-->
 ```py
-tz: [('+0530', 19), ('+0500', 5), ('+0000', 4), ('+0200', 2), ('+0600', 2), ('-0400', 2), ('+0400', 2), ('+0100', 1), ('+0300', 1), ('-0500', 1)]
-has subject: [(True, 21), (False, 18)]
-ctype: [('text/html', 36), ('text/plain', 3)]
+tz: [('+0530', 20), ('+0500', 6), ('+0000', 5), ('+0200', 2), ('+0600', 2), ('+0300', 2), ('-0400', 2), ('+0400', 2), ('+0100', 1), ('-0500', 1)]
+has subject: [(True, 23), (False, 20)]
+ctype: [('text/html', 40), ('text/plain', 3)]
 ```
 <!--END emlstat-->
 
@@ -52,3 +52,7 @@ ctype: [('text/html', 36), ('text/plain', 3)]
 |  37|[I am interested in learning how to use GitHub](<0037.md>)|29 Sep 2026|
 |  38|[Download from any site that holds some subscription](<0038.md>)|30 Sep 2026|
 |  39|[Hi](<0039.md>)|04 Oct 2026|
+|  40|[Seeking Direction: Tools for online work needed](<0040.md>)|05 Oct 2026|
+|  41|[\(Blank\)](<0041.md>)|07 Oct 2026|
+|  42|[help me for githup](<0042.md>)|07 Oct 2026|
+|  43|[i want remote job](<0043.md>)|09 Oct 2026|
