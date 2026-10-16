@@ -3,9 +3,9 @@
 ## statistics
 <!--BEGIN emlstat-->
 ```py
-tz: [('+0530', 22), ('+0500', 6), ('+0000', 5), ('+0200', 2), ('+0600', 2), ('+0300', 2), ('-0400', 2), ('+0400', 2), ('+0100', 1), ('-0500', 1)]
-has subject: [(True, 25), (False, 20)]
-ctype: [('text/html', 42), ('text/plain', 3)]
+tz: [('+0530', 22), ('+0500', 6), ('+0000', 5), ('+0200', 2), ('+0600', 2), ('+0300', 2), ('+0100', 2), ('-0400', 2), ('+0400', 2), ('-0500', 1)]
+has subject: [(True, 26), (False, 20)]
+ctype: [('text/html', 43), ('text/plain', 3)]
 ```
 <!--END emlstat-->
 
@@ -58,3 +58,4 @@ ctype: [('text/html', 42), ('text/plain', 3)]
 |  43|[i want remote job](<0043.md>)|09 Oct 2026|
 |  44|[Intrested](<0044.md>)|15 Oct 2026|
 |  45|[Hi i want to see yor projects](<0045.md>)|15 Oct 2026|
+|  46|[Love you work](<0046.md>)|16 Oct 2026|
