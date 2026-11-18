@@ -3,9 +3,9 @@
 ## statistics
 <!--BEGIN emlstat-->
 ```py
-tz: [('+0530', 25), ('+0500', 6), ('+0000', 5), ('+0300', 3), ('+0200', 2), ('+0600', 2), ('+0100', 2), ('-0400', 2), ('+0400', 2), ('-0500', 1)]
-has subject: [(True, 29), (False, 21)]
-ctype: [('text/html', 45), ('text/plain', 5)]
+tz: [('+0530', 25), ('+0500', 6), ('+0000', 6), ('+0300', 3), ('+0200', 2), ('+0600', 2), ('+0100', 2), ('-0400', 2), ('+0400', 2), ('-0500', 1)]
+has subject: [(True, 30), (False, 21)]
+ctype: [('text/html', 46), ('text/plain', 5)]
 ```
 <!--END emlstat-->
 
@@ -63,3 +63,4 @@ ctype: [('text/html', 45), ('text/plain', 5)]
 |  48|[Hello](<0048.md>)|18 Oct 2026|
 |  49|[Accountant job application\.](<0049.md>)|21 Oct 2026|
 |  50|[Hi](<0050.md>)|31 Oct 2026|
+|  51|[definitely need traverse\_obj in my own scripts\. gonna steal it from yt\-dlp\.](<0051.md>)|17 Nov 2026|
