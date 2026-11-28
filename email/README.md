@@ -3,9 +3,9 @@
 ## statistics
 <!--BEGIN emlstat-->
 ```py
-tz: [('+0530', 26), ('+0500', 6), ('+0000', 6), ('+0300', 3), ('+0100', 3), ('+0200', 2), ('+0600', 2), ('-0400', 2), ('+0400', 2), ('-0500', 1)]
-has subject: [(True, 30), (False, 23)]
-ctype: [('text/html', 48), ('text/plain', 5)]
+tz: [('+0530', 27), ('+0500', 7), ('+0000', 6), ('+0300', 3), ('+0100', 3), ('+0200', 2), ('+0600', 2), ('-0400', 2), ('+0400', 2), ('-0500', 1)]
+has subject: [(True, 30), (False, 25)]
+ctype: [('text/html', 50), ('text/plain', 5)]
 ```
 <!--END emlstat-->
 
@@ -66,3 +66,5 @@ ctype: [('text/html', 48), ('text/plain', 5)]
 |  51|[definitely need traverse\_obj in my own scripts\. gonna steal it from yt\-dlp\.](<0051.md>)|17 Nov 2026|
 |  52|[0.30000000000000004](<0052.md>)|25 Nov 2026|
 |  53|[How to watch paid videos for free](<0053.md>)|26 Nov 2026|
+|  54|[What's up](<0054.md>)|27 Nov 2026|
+|  55|[I am data analysts](<0055.md>)|28 Nov 2026|
